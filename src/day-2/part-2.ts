@@ -32,8 +32,7 @@ outer: for (let i = 0; i < input.length; i++) {
         if (
             (accending && next < current) ||
             (decending && next > current) ||
-            (difference > 3 || difference < 1) &&
-            next !== current
+            (difference > 3 || difference < 1) && next !== current
         ) {
             if (numbers.length === 5) {
                 input.push(numbers.filter((_, k) => k !== j).join(" "));
