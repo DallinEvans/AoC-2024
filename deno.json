@@ -1,13 +1,14 @@
 {
-  "tasks": {
-    "scaffold": "deno run --allow-write --allow-read --allow-env ./src/scaffold.ts",
-    "dev": "deno run --allow-net --allow-read --allow-env --watch ./src/main.ts",
-    "clean": "deno fmt ./src && deno lint --fix ./src"
-  },
-  "imports": {
-    "@src/": "./src/"
-  },
-  "fmt": {
-    "lineWidth": 240
-  }
+    "tasks": {
+        "scaffold": "deno run --allow-write --allow-read --allow-env ./src/scaffold.ts",
+        "dev": "deno run --allow-net --allow-read --allow-env --watch ./src/main.ts",
+        "clean": "deno fmt ./src && deno lint --fix ./src"
+    },
+    "imports": {
+        "@src/": "./src/"
+    },
+    "fmt": {
+        "lineWidth": 240,
+        "indentWidth": 4
+    }
 }

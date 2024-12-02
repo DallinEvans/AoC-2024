@@ -6,21 +6,21 @@ const left: Array<number> = [];
 const right: Array<number> = [];
 
 for (let i = 0; i < input.length; i++) {
-  if (!input[i]) continue;
+    if (!input[i]) continue;
 
-  const split = input[i].split("   ");
+    const split = input[i].split("   ");
 
-  left.push(Number(split[0]));
-  right.push(Number(split[1]));
+    left.push(Number(split[0]));
+    right.push(Number(split[1]));
 }
 
 const similarities: Array<number> = [];
 
 for (let i = 0; i < left.length; i++) {
-  similarities.push(left[i] * right.filter((r) => r === left[i]).length);
+    similarities.push(left[i] * right.filter((r) => r === left[i]).length);
 }
 
 console.log(
-  "Result:",
-  similarities.reduce((a, b) => a + b, 0),
+    "Result:",
+    similarities.reduce((a, b) => a + b, 0),
 );
