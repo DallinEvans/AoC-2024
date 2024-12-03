@@ -10,7 +10,7 @@ async function getInputForDay(day: number): Promise<string[]> {
 
     const text = await response.text();
 
-    return text.split("\n");
+    return text.split("\n").filter((v) => v !== "");
 }
 
 export default {
